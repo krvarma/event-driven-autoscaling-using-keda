@@ -1,5 +1,5 @@
 # Event driven autoscaling of Kubernetes workloads using KEDA
-
+![enter image description here](https://raw.githubusercontent.com/krvarma/event-driven-autoscaling-using-keda/master/images/keda.png)
 [In my previous article](https://medium.com/swlh/rabbitmq-trigger-and-azure-functions-8826633bf54c), we explored how to use RabbitMQ Extension for Azure Functions. We discussed how to create an Azure Function using RabbitMQ Extension. The function gets triggered when we send a message to a RabbitMQ Queue. We also discussed how to generate a Dockerfile so that we can use it in production environments.
 
 In this article, we will explore how to deploy this function in a Kubernetes cluster and autoscale it using KEDA.
@@ -191,6 +191,8 @@ Now let's run the RabbitMQ producer in another command shell to send a message t
     node send.js TemperatureReading 19.2
 
 If everything goes well, you can see the function pod running.
+
+![enter image description here](https://raw.githubusercontent.com/krvarma/event-driven-autoscaling-using-keda/master/images/getpods.svg)
 
 ## The ScaledObject
 
